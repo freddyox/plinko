@@ -1,0 +1,14 @@
+#include "../include/Plinko.hh"
+
+#include <iostream>
+
+
+Plinko::Plinko(double x, double y, int n) : fDisx(x), fDisy(y), fN(n) {
+
+ 
+}
+
+
+void Prism::draw( sf::RenderTarget& target, sf::RenderStates) const {
+  ;
+}
