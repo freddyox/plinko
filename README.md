@@ -12,5 +12,6 @@ at the end of it's path. Here is an example of many experiments:
 ![plinko](https://github.com/freddyox/plinko/blob/master/output/ssplinko_nsim_350.jpg)
 
 * The puck's final position depends on the starting position. If one drops the puck in the center position and runs the experiment
-many times, then the puck's final position takes a Gaussian distribution:
+many times, then the puck's final position takes a Gaussian distribution with a mean equal to the starting position. This is no
+surprise, though, as the game is similar to the 1D drunken walk:
 ![distro](https://github.com/freddyox/plinko/blob/master/output/pinko_results.png)
