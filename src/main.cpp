@@ -15,23 +15,27 @@ const double gDisplayy = 1000;
 
 int main() {
 
-  sf::RenderWindow window(sf::VideoMode(gDisplayx,gDisplayy), "Prism");
+  sf::RenderWindow window(sf::VideoMode(gDisplayx,gDisplayy), "Plinko");
   window.setFramerateLimit(60);
 
   //////////////////////////////////////////////////////
   //                   Initialize                     //
   //////////////////////////////////////////////////////
-  Plinko plinko(gDisplayx, gDisplayy, 5);
+  int Nsimulations = 350;
+  Plinko plinko(gDisplayx, gDisplayy, 10, Nsimulations);
 
   while( window.isOpen() ) {
 
     sf::Event event;
     while( window.pollEvent(event) ) {
       if( event.type == sf::Event::Closed || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) ) {
+	sf::Image output = window.capture();
+	output.saveToFile( Form("ssplinko_nsim_%d.jpg",Nsimulations) );
+	std::cout << "Saving screenshot " << Form("ssplinko_nsim_%d.jpg",Nsimulations) << std::endl;
 	window.close();
       }
     }
-    window.clear(sf::Color::Black);
+    window.clear(sf::Color::White);
     window.draw(plinko);
     window.display();      
   }

@@ -4,7 +4,7 @@ echo "Compiling..."
 echo " "
 cd src/
 
-g++ -c main.cpp Plinko.cpp
+g++ -c main.cpp Plinko.cpp -pthread -m64 -std=gnu++11 -I/home/freddy/Documents/root/include -L/home/freddy/Documents/root/lib -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -pthread -lm -ldl -rdynamic
 
 
 echo "Linking..."
@@ -18,7 +18,7 @@ fi
 mv *.o ../linkers
 cd ../linkers
 
-g++ main.o Plinko.o -o plinko -lsfml-graphics -lsfml-window -lsfml-system
+g++ main.o Plinko.o -o plinko -lsfml-graphics -lsfml-window -lsfml-system -I/home/freddy/Documents/root/include -L/home/freddy/Documents/root/lib -lCore -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -pthread -lm -ldl -rdynamic
 
 mv plinko ../
 cd ../
