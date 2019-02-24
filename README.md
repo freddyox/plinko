@@ -1,5 +1,5 @@
 # Plinko
-* A Monte carlo simulation of the famous plinko game; a full description may be 
+* A Monte carlo simulation of the famous plinko game; a full description of my program may be 
 seen <a href="https://freddyox.github.io/blog/plinko/">here</a>.
 * The simualation makes use of <a href="https://root.cern.ch/download/root_v6.14.04.source.tar.gz">CERN's ROOT libraries</a> 
 for plotting and analysis in addition to the <a href="https://www.sfml-dev.org/">SFML multimedia library</a> for visualization. 
